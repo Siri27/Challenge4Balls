@@ -4,11 +4,11 @@ import processing.core.PApplet;
 
 public class Challenge4Balls extends PApplet {
 
-    public static final int WIDTH = 1000;
-    public static final int HEIGHT = 1000;
+    public static final int WIDTH = 640;
+    public static final int HEIGHT = 480;
     public static final float diameter=10;
     int x=0;
-    int y=HEIGHT/8;
+    int y=HEIGHT/5;
     private int i;
 
 
@@ -40,7 +40,7 @@ public class Challenge4Balls extends PApplet {
 
     private void drawCircle() {
 
-        ellipse(i*x/2,y*i, diameter, diameter);
+        ellipse(i*x,y*i, diameter, diameter);
         x++;
 
     }
