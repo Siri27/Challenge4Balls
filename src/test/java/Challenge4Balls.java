@@ -7,11 +7,9 @@ public class Challenge4Balls extends PApplet {
     public static final int WIDTH = 640;
     public static final int HEIGHT = 480;
     public static final float diameter=10;
-    int x=0;
-    int y=HEIGHT/5;
-    private int i;
-
-
+    int xCoordinate=0;
+    int yCoordinate=HEIGHT/5;
+    
     public static void main(String args[]){
         PApplet.main("Challenge4Balls",args);
     }
@@ -33,20 +31,16 @@ public class Challenge4Balls extends PApplet {
 
     @Override
     public void draw() {
-        for ( i = 1; i <=4 ; i++) {
-            drawCircle();
+        for ( int level = 1; level <=4 ; level++) {
+            circle(xCoordinate*level,yCoordinate*level);
         }
+        xCoordinate++;
     }
 
-    private void drawCircle() {
+    private void circle(int speed,int level) {
 
-        ellipse(i*x,y*i, diameter, diameter);
-        x++;
+        ellipse(speed,level, diameter, diameter);
 
-    }
-
-    private void paintbg() {
-        background(148,0,211);
     }
 
 }
